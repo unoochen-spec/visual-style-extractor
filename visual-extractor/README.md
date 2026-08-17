@@ -12,6 +12,8 @@ Open `http://localhost:4173`. The app analyzes images with the local Ollama visi
 
 Local development uses `AI_PROVIDER=ollama` by default. To run the same cloud mode used by Render, set `AI_PROVIDER=openai`, add `OPENAI_API_KEY`, and optionally override `OPENAI_MODEL` (the default is `gpt-5.6-luna`). OpenAI mode powers both image analysis and Chinese/English result translation.
 
+If the OpenAI service is unavailable or has no remaining quota, the server automatically falls back to real local pixel analysis powered by Sharp. The fallback samples the uploaded image to extract its dominant palette, luminance, contrast, saturation, edge density, aspect ratio, composition, texture, bilingual summary, and reusable prompt. This keeps the deployed tool usable without paid API credit.
+
 Add `UNSPLASH_ACCESS_KEY` to the root `.env` file to enable live related-material search. The key is used only by the Node server and is never sent to the browser. Without it, the feed automatically uses 12 curated real-image references.
 
 The server accepts one JPG or PNG up to 10MB and keeps it in memory only for the request lifetime.
