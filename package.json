@@ -1,0 +1,1 @@
+{"name":"visual-style-extractor","version":"1.0.0","private":true,"type":"commonjs","scripts":{"start":"node server.js","test":"node --test tests/*.test.js"},"dependencies":{"busboy":"^1.6.0","dotenv":"^17.4.2","openai":"^5.12.2"}}

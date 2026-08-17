@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: visual-style-extractor
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /
+    autoDeployTrigger: commit
+    envVars:
+      - key: AI_PROVIDER
+        value: openai
+      - key: OPENAI_MODEL
+        value: gpt-5.6-luna
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: UNSPLASH_ACCESS_KEY
+        sync: false

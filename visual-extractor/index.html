@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="AI visual style analysis tool">
+  <title>VIBE.DNA — Visual Style Extractor</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <div class="app">
+    <header class="nav">
+      <div class="nav-cell"><a class="brand" href="/">VIBE.DNA / VISUAL STYLE EXTRACTOR</a><span class="meta">AI ANALYSIS TOOL_01</span></div>
+      <div class="nav-cell"><span class="meta" data-i18n="nav.status">SYSTEM: READY</span><button id="language" class="text-control" type="button" data-i18n="nav.language">EN / 中文</button></div>
+    </header>
+    <main class="workspace">
+      <section class="operation">
+        <div class="hero-copy">
+          <span class="kicker" data-i18n="hero.kicker">VISUAL INTELLIGENCE / 2026</span>
+          <h1 data-i18n="hero.title">VISUAL<br>STYLE<br>EXTRACTOR</h1>
+          <p class="description" data-i18n="hero.description"></p>
+        </div>
+        <div class="hero-action">
+          <div id="drop-zone" class="drop-zone">
+            <input id="file-input" type="file" accept="image/jpeg,image/png" hidden>
+            <button id="drop-copy" class="upload-trigger" type="button" aria-label="Upload image"><span class="star">✦</span><strong data-i18n="upload.drop"></strong><small data-i18n="upload.rules"></small></button>
+            <div id="preview" class="preview" hidden><img id="preview-image" alt="Selected image preview"><div><strong id="filename"></strong><small id="filesize"></small></div><button id="replace" type="button" data-i18n="upload.replace"></button></div>
+          </div>
+          <p id="error" class="error" role="alert"></p>
+          <div id="progress" class="progress" hidden aria-live="polite"></div>
+          <div class="operation-footer"><p class="legal"><span data-i18n="privacy"></span><br>ALL DATA PROCESSED TEMPORARILY</p><button id="analyze" class="primary" type="button" disabled><span data-i18n="upload.action"></span><b>→</b></button></div>
+        </div>
+      </section>
+      <aside id="report" class="report" aria-live="polite"></aside>
+    </main>
+    <section id="references" class="references" aria-live="polite">
+      <header><div><h2 id="feed-title" data-i18n="samples"></h2><p id="feed-summary" data-i18n="samples.sub"></p></div></header>
+      <div id="sample-grid" class="sample-grid"></div>
+      <div id="feed-sentinel" class="feed-sentinel" aria-hidden="true"></div>
+      <div class="feed-footer"><p id="feed-status" class="feed-status" role="status" aria-live="polite"></p><button id="feed-retry" class="feed-retry" type="button" hidden></button></div>
+    </section>
+    <footer><span>©2026 VIBE.DNA LAB</span><span data-i18n="privacy"></span></footer>
+  </div>
+  <script src="/i18n.js"></script>
+  <script src="/files.js"></script>
+  <script src="/recommendations.js"></script>
+  <script src="/infinite-feed.js"></script>
+  <script src="/ui-state.js"></script>
+  <script src="/report.js"></script>
+  <script src="/loading.js"></script>
+  <script src="/translation-state.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+.env
+.env.*
+!.env.example
+node_modules/
+npm-debug.log*
+*.log
+.DS_Store
+.worktrees/
+.chrome-ai-tab-check/
+.superpowers/
+/docs/
+
+# Local visual QA captures and unrelated prototypes
+/*.png
+/assets/
+/ai-tab.html
+/fortune.css
+/fortune.html
+/fortune.js
+/fortune.test.js
